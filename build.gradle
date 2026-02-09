@@ -1,0 +1,24 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+}
+    delete rootProject.buildDir
+task clean(type: Delete) {
+
+}
+    }
+        mavenCentral()
+        google()
+    repositories {
+allprojects {
+
+}
+    }
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:8.2.0'
+    dependencies {
+    }
+        mavenCentral()
+        google()
+    repositories {
+    ext.kotlin_version = "1.9.20"
+buildscript {
+

@@ -30,4 +30,4 @@ captures/
 output.json
 *.hprof
 .cxx/
-
+.idea/vcs.xml

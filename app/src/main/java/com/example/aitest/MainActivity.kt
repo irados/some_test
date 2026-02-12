@@ -14,6 +14,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.aitest.ui.theme.AITestTheme
+ import com.example.aitest.ui.theme.Green40
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +55,10 @@ fun ApiTestScreen(viewModel: ApiViewModel = viewModel()) {
         Button(
             onClick = { viewModel.getUsersList() },
             modifier = Modifier.fillMaxWidth(),
-            enabled = !uiState.isLoading
+            enabled = !uiState.isLoading,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Green40
+            )
         ) {
             Text("GET - Fetch Users List")
         }
@@ -63,7 +67,10 @@ fun ApiTestScreen(viewModel: ApiViewModel = viewModel()) {
         Button(
             onClick = { viewModel.getSingleUser(1) },
             modifier = Modifier.fillMaxWidth(),
-            enabled = !uiState.isLoading
+            enabled = !uiState.isLoading,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Green40
+            )
         ) {
             Text("GET - Fetch Single User")
         }
@@ -72,7 +79,10 @@ fun ApiTestScreen(viewModel: ApiViewModel = viewModel()) {
         Button(
             onClick = { viewModel.createUser() },
             modifier = Modifier.fillMaxWidth(),
-            enabled = !uiState.isLoading
+            enabled = !uiState.isLoading,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Green40
+            )
         ) {
             Text("POST - Create User")
         }
@@ -81,7 +91,10 @@ fun ApiTestScreen(viewModel: ApiViewModel = viewModel()) {
         Button(
             onClick = { viewModel.updateUser(2) },
             modifier = Modifier.fillMaxWidth(),
-            enabled = !uiState.isLoading
+            enabled = !uiState.isLoading,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Green40
+            )
         ) {
             Text("PUT - Update User")
         }
@@ -92,7 +105,7 @@ fun ApiTestScreen(viewModel: ApiViewModel = viewModel()) {
             modifier = Modifier.fillMaxWidth(),
             enabled = !uiState.isLoading,
             colors = ButtonDefaults.buttonColors(
-                containerColor = MaterialTheme.colorScheme.error
+                containerColor = Green40
             )
         ) {
             Text("DELETE - Delete User")
